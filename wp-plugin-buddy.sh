@@ -50,6 +50,11 @@ if [[ ! -d "${BUDDY_PROJECT_DIR}/${WP_ORG_ASSETS_DIR}/" ]]; then
 	mkdir -p "${BUDDY_PROJECT_DIR}/${WP_ORG_ASSETS_DIR}/"
 fi
 
+# Create the SVN_BUILDS_DIR if it does not exist.
+if [[ ! -d "${SVN_BUILDS_DIR}/" ]]; then
+	mkdir -p "${SVN_BUILDS_DIR}/"
+fi
+
 echo "ℹ︎ WP_ORG_SLUG: ${WP_ORG_SLUG}"
 echo "ℹ︎ BUDDY_EXECUTION_TAG: ${BUDDY_EXECUTION_TAG}"
 echo "ℹ︎ WP_ORG_ASSETS_DIR: ${WP_ORG_ASSETS_DIR}"
